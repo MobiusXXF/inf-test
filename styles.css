@@ -1,6 +1,10 @@
 /* Infinity Scroll */
 * { overflow: hidden;}
 
+html {
+    background: var(--bg);
+}
+
 :root {
     --bg: #1a1a1a;
     --min-size: 200px;
@@ -172,12 +176,13 @@ button:nth-of-type(1) svg {
     object-fit: cover;
 }
 
-.box:nth-of-type(odd) {
-    background: #b3f075;
-}
-
-.box:nth-of-type(even) {
-    background: #66b814;
+.box iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 @supports (-webkit-box-reflect: below) {
